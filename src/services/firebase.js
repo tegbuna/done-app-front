@@ -3,9 +3,9 @@ import firebase from 'firebase/app';
 //import auth package from firebase
 import 'firebase/auth';
 
-const firebaseConfig = {
+
   // Firebase configuration
-  var firebaseConfig = {
+  const firebaseConfig = {
     apiKey: "AIzaSyDjCPpxbggnjAalY8pQ75SHfj4mps-S_lY",
     authDomain: "done-63ec6.firebaseapp.com",
     projectId: "done-63ec6",

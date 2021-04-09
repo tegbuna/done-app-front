@@ -2,7 +2,7 @@ import { login, logout } from '../../services/firebase';
 
 const Header = (props) => (
     <header>
-       <a href="https://imgur.com/tU3hMkr"><img src="https://i.imgur.com/tU3hMkr.png" title="source: imgur.com" /></a>
+       <a href="https://imgur.com/6HEpcDl"><img src="https://i.imgur.com/6HEpcDl.png" title="source: imgur.com" /></a>
         <ul>
             {
                 props.user ?

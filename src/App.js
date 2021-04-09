@@ -1,25 +1,112 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import Header from "./components/Header/Header";
+import "./styles.css";
 
-function App() {
+import { auth } from './services/firebase';
+
+export default function App() {
+  
+  const [state, setState] = useState({
+    user: null,
+    chores: [{ chore: "Wash Dishes", status: "Complete" }],
+    newChore: {
+      status: "",
+      status: "Incomplete",
+    },
+  });
+
+  async function getAppData() {
+    try {
+      const BASE_URL = "http://localhost:4001/api/chores";
+      const chores = await fetch(BASE_URL).then(res => res.json());
+      setState((prevState) => ({
+        ...prevState,
+        chores,
+      }));
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    getAppData();
+    
+    auth.onAuthStateChanged(user => {
+      setState(prevState => ({
+        ...prevState,
+        user,
+      }));
+    });
+
+  }, []);
+
+  async function addChore(e) {
+    if(!state.user) return;
+    
+    e.preventDefault();
+    
+    const BASE_URL = 'http://localhost:4001/api/chores';
+    
+    const chore = await fetch(BASE_URL, {
+      method: 'POST',
+      headers: {
+        'Content-type': 'Application/json'
+      },
+      body: JSON.stringify(state.newChore)
+    }).then(res => res.json());
+
+    setState((prevState) => ({
+      ...prevState,
+      chores: [...prevState.chores, chore],
+      newChore: {
+        chore: "",
+        status: "3",
+      },
+    }));
+  }
+
+  function handleChange(e) {
+    setState((prevState) => ({
+      ...prevState, 
+      newChore: {
+        ...prevState.newChore,
+        [e.target.name]: e.target.value 
+      }
+    })) 
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        Done App
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header user={state.user} />
+      <main>
+        <section>
+          {state.chores.map((s) => (
+            <article key={s.chore}>
+              <div>{s.chore}</div> <div>{s.status}</div>
+            </article>
+          ))}
+          {
+            state.user && 
+            <>
+            <hr />
+              <form onSubmit={addChore}>
+                <label>
+                  <span>CHORE</span>
+                  <input name="chore" value={state.newChore.chore} onChange={handleChange} />
+                </label>
+                <label>
+                  <span>STATUS</span>
+                  <select name="status" value={state.newChore.status} onChange={handleChange} >
+                    <option value="false">Incoplete</option>
+                    <option value="true">Complete</option>
+                  </select>
+                </label>
+                <button>ADD CHORE</button>
+              </form>
+            </>
+          }
+        </section>
+      </main>
+    </>
   );
 }
-
-export default App;
