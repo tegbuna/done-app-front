@@ -5,7 +5,7 @@
 This will is a to-do app that allows a user to identify and keep track of chores they have been assigned that need to be completed. 
 
 # User stories:
-* AAU – I want to be able to see a list of my weekly chores.
+* AAU – I want to be able to create a list of my weekly chores.
 * AAU – I want to be able to check off chores I have completed.
 
 
@@ -36,8 +36,8 @@ ERD
 Icebox
 
 # Github Repositories:
-** [Front-end]    https://github.com/tegbuna/done-app-front.git 
-** [Back-end]     https://github.com/tegbuna/done-app-back.git 
+** [Front-end]    (https://github.com/tegbuna/done-app-front.git) 
+** [Back-end]     (https://github.com/tegbuna/done-app-back/tree/masterbranch )
 
 # Images:
 * Wire Frame: [Insert]

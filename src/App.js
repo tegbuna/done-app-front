@@ -8,10 +8,10 @@ export default function App() {
   
   const [state, setState] = useState({
     user: null,
-    chores: [{ chore: "Chore", status: "Status" }],
+    chores: [{ chore: "", status: "" }],
     newChore: {
       chore: "",
-      status: "Incomplete",
+      status: "",
     },
   });
 
