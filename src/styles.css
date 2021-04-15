@@ -5,8 +5,12 @@
   body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-   background-size: cover;
-    background-image: url(https://i.imgur.com/Kz5bswu.jpg);
+    background-size: cover;
+    /* background-position: bottom left; */
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://i.imgur.com/0INmufm.jpg');
   }
   
   #root {
@@ -61,7 +65,9 @@
     display: flex;
     justify-content: space-between;
     min-width: 15rem;
-    color: white;
+    
+    /* background-color: rgba(50, 50, 50, .5); */
+    color: rgb(6, 0, 51);
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     margin: 0.1rem;

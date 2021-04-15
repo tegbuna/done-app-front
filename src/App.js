@@ -8,9 +8,9 @@ export default function App() {
   
   const [state, setState] = useState({
     user: null,
-    chores: [{ chore: "Wash Dishes", status: "Complete" }],
+    chores: [{ chore: "Chore", status: "Status" }],
     newChore: {
-      status: "",
+      chore: "",
       status: "Incomplete",
     },
   });
@@ -60,7 +60,7 @@ export default function App() {
       chores: [...prevState.chores, chore],
       newChore: {
         chore: "",
-        status: "3",
+        status: "",
       },
     }));
   }
@@ -89,20 +89,23 @@ export default function App() {
             state.user && 
             <>
             <hr />
+            <fieldset>
+              <legend>Add A Chore</legend>
               <form onSubmit={addChore}>
                 <label>
-                  <span>CHORE</span>
+                  <span>Chore</span>
                   <input name="chore" value={state.newChore.chore} onChange={handleChange} />
                 </label>
                 <label>
-                  <span>STATUS</span>
+                  <span>Status</span>
                   <select name="status" value={state.newChore.status} onChange={handleChange} >
-                    <option value="false">Incoplete</option>
-                    <option value="true">Complete</option>
+                    <option value="Incomplete">Incomplete</option>
+                    <option value="Complete">Complete</option>
                   </select>
                 </label>
                 <button>ADD CHORE</button>
               </form>
+              </fieldset>
             </>
           }
         </section>

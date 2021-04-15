@@ -20,9 +20,11 @@ This will is a to-do app that allows a user to identify and keep track of chores
 * JavaScript
 * CSS
 * CORS
+* Heroku
+* Netlify
 
 # Getting Started with Done! App 
-[TBA]
+    To get started, log in to the app using your google credentials.  Once you're logged in you can create a new chore list and mark off any completions as you go. It's that simple.
 
 # Links: 
 [Trello Board] (https://trello.com/b/XNxl8kRe/done-app) 
@@ -40,6 +42,11 @@ Icebox
 # Images:
 * Wire Frame: [Insert]
 * ERD: [Insert]
+* Deployed App: 
+    [Imgur](https://i.imgur.com/7DkNDbx.png?1)
+
+    [Imgur](https://i.imgur.com/NVTGGKM.png?1)
+
 
 
 # Future Enhancements: 
@@ -54,6 +61,6 @@ Possible additional user stories:
 # Unresolved Problems: TBD
 
 ### Deployment
-Front end: [] ()
-Back end: [Heroku] ()
+Front end: [Netlify] (https://the-done-app.netlify.app/)
+Back end: [Heroku] (https://the-done-app.herokuapp.com/)
 
