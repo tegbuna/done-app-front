@@ -17,7 +17,7 @@ export default function App() {
 
   async function getAppData() {
     try {
-      const BASE_URL = "https://this-done-app.herokuapp.com/api/chores/";
+      const BASE_URL = "https://the-done-app.herokuapp.com/api/chores/";
       const chores = await fetch(BASE_URL).then(res => res.json());
       setState((prevState) => ({
         ...prevState,
@@ -45,7 +45,7 @@ export default function App() {
     
     e.preventDefault();
     
-    const BASE_URL = 'https://this-done-app.herokuapp.com/api/chores/';
+    const BASE_URL = 'https://the-done-app.herokuapp.com/api/chores/';
     
     const chore = await fetch(BASE_URL, {
       method: 'POST',
