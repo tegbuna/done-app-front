@@ -6,13 +6,12 @@ This will is a to-do app that allows a user to identify and keep track of chores
 
 # User stories:
 * AAU – I want to be able to create a list of my weekly chores.
-* AAU – I want to be able to check off chores I have completed.
+* AAU – I want to be able to mark chores I have completed.
 
 
 
 # Technologies:
 * MongoDB
-* Mongoose
 * Express
 * AJAX
 * React
@@ -20,6 +19,9 @@ This will is a to-do app that allows a user to identify and keep track of chores
 * JavaScript
 * CSS
 * CORS
+* Unsplash
+* Imgur
+* Logomkr.com
 * Heroku
 * Netlify
 
@@ -40,12 +42,12 @@ Icebox
 ** [Back-end]     (https://github.com/tegbuna/done-app-back/tree/masterbranch )
 
 # Images:
-* Wire Frame: [Insert]
-* ERD: [Insert]
+* Wire Frame: [Imgur](https://i.imgur.com/xBhJVez.png)
+* ERD: [Imgur](https://i.imgur.com/2WyYyS4.png)
 * Deployed App: 
-    [Imgur](https://i.imgur.com/7DkNDbx.png?1)
+    [Imgur](https://i.imgur.com/ZnPWp5L.png)
 
-    [Imgur](https://i.imgur.com/NVTGGKM.png?1)
+    [Imgur](https://i.imgur.com/vaKSkKJ.png)
 
 
 
