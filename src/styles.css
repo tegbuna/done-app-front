@@ -71,7 +71,7 @@
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     margin: 0.1rem;
-    /* background-color: #808080; */
+    
   }
     
   article > div {
@@ -80,7 +80,6 @@
     
   article > div:nth-child(2) {
     width: 2rem;
-    /* background-color: white; */
     text-align: center;
   }
     
@@ -102,7 +101,7 @@
     font-size: 1rem; 
     font-weight: bold;
     padding: 0.4rem;
-    color: white;
+    color: rgb(6, 0, 51);
     /* border: 2px solid white; */
     background-color: transparent;
     /* border-radius: 99; */
@@ -126,6 +125,10 @@
   button:hover {
     color: white;
     background-color: #272729;
+  }
+
+  fieldset {
+    color: rgb(6, 0, 51);
   }
   
   
